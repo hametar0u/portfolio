@@ -27,13 +27,13 @@ const addStar = () => {
   const material = new THREE.MeshBasicMaterial( { color: 0xFFFFFF } );
   const star = new THREE.Mesh( geometry, material );
 
-  const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(100) );
+  const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(500) );
 
   star.position.set(x, y, z);
   scene.add(star);
 };
 
-Array(200).fill().forEach(addStar);
+Array(1000).fill().forEach(addStar);
 
 //grid helper
 const gridHelper = new THREE.GridHelper(200, 50);
@@ -57,11 +57,12 @@ const moveCamera = () => {
   camera.position.z = t * 0.015 + 100;
   camera.position.x = t * -0.0002;
   camera.position.y = t * -0.0002;
+  camera.rotation.y = t * -0.0001;
 
-  circle.rotation.x = t * -0.002;
+  // circle.rotation.x = t * -0.002;
   // circle.rotation.y = t * -0.0003;
   // circle.rotation.z = t * -0.0003;
-  circle.position.z = t * 0.015;
+  // circle.position.z = t * 0.015;
 
 };
 
