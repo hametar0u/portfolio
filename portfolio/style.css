@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+h1, h2, h3, p {
+  font-family: Lato, sans-serif;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 300;
+}
+
+main {
+  width: 100vw;
+  color: white;
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  margin: 0px auto;
+  padding: 120px 0px;
+  height: 10000px;
+  
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+header {
+  grid-column: 2/8;
+}
+
+section {
+  padding: 40px;
+  grid-column: 2 / 8;
+  padding: 1rem;
+  background: var(--dark-bg);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: var(--spacing);
+}
+
+.container {
+  background-color: black;
+  padding: 10px;
+}
